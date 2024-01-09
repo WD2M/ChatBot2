@@ -4,6 +4,7 @@ const SearchContactChatWood = require('../../servicios/SearchContacs');
 
 const flowSoporte = addKeyword('4')
     .addAnswer('Para brindarle *Soporte* a tu problema *ingresa* en el *Link* de *WhatsApp* https://wa.link/koi8pr\n\nEn el *Link* te darán pronta *Solución*  ⚙️🧰')
+    .addAnswer('*5* Regresar al Menú Anterior')
     .addAction({ capture: true, idle: 600000 }, async (ctx, { fallBack }) => {
 
         if (ctx?.idleFallBack) {
