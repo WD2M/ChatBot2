@@ -16,7 +16,7 @@ const chatwoodHook = async (req, res) => {
   res.send(body)
 }
 router.post('/chatwood_hook', chatwoodHook)
-router.get("/get-qr2", async (_, res) => {
+router.get("/empresas", async (_, res) => {
   const YOUR_PATH_QR = join(process.cwd(), `bot.qr.png`);
   const fileStream = createReadStream(YOUR_PATH_QR);
 
