@@ -16,20 +16,34 @@ const chatwoodHook = async (req, res) => {
   res.send(body)
 }
 router.post('/chatwood_hook', chatwoodHook)
-router.get("/empresas", async (_, res) => {
+router.get("/empresas1", async (_, res) => {
   const YOUR_PATH_QR = join(process.cwd(), `bot.qr.png`);
   const fileStream = createReadStream(YOUR_PATH_QR);
 
   res.writeHead(200, { "Content-Type": "image/png" });
   fileStream.pipe(res);
 })
-/*router.get("/get-qr2", async (_, res) => {
-  const YOUR_PATH_QR = join(process.cwd(), `bot-2.qr.png`);
+router.get("/empresas2", async (_, res) => {
+  const YOUR_PATH_QR = join(process.cwd(), `empresa2.qr.png`);
   const fileStream = createReadStream(YOUR_PATH_QR);
 
   res.writeHead(200, { "Content-Type": "image/png" });
   fileStream.pipe(res);
-});*/
+});
+router.get("/empresas3", async (_, res) => {
+  const YOUR_PATH_QR = join(process.cwd(), `empresa3.qr.png`);
+  const fileStream = createReadStream(YOUR_PATH_QR);
+
+  res.writeHead(200, { "Content-Type": "image/png" });
+  fileStream.pipe(res);
+});
+router.get("/empresas4", async (_, res) => {
+  const YOUR_PATH_QR = join(process.cwd(), `empresa4.qr.png`);
+  const fileStream = createReadStream(YOUR_PATH_QR);
+
+  res.writeHead(200, { "Content-Type": "image/png" });
+  fileStream.pipe(res);
+});
 
 
 module.exports = router
