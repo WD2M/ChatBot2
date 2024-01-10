@@ -2,6 +2,7 @@ const { createBot, createProvider, createFlow, } = require('@bot-whatsapp/bot')
 
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/json')
+const MockAdapter1 = require('@bot-whatsapp/database/json')
 const QRPortalWeb = require('@bot-whatsapp/portal')
 
 const { flowSaludo } = require('./Flujos/flujos-solitarios/flowSaludo');
@@ -16,7 +17,7 @@ const ServerHttp = require('./Http');
 const adapterProvider = createProvider(BaileysProvider)
 
 const main = async () => {
-    const adapterDB = new MockAdapter()
+    const adapterDB = new MockAdapter({name: '1'})
     const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
 
     await createBot({
@@ -31,7 +32,7 @@ const main = async () => {
 
 const main1 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa2'})
-    const adapterDB = new MockAdapter()
+    const adapterDB = new MockAdapter1({name: '2'})
     const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
 
     await createBot({
@@ -41,9 +42,9 @@ const main1 = async () => {
     })
     QRPortalWeb({name: 'empresa2', port: 4001})
 }
-const main2 = async () => {
+/*const main2 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa3'})
-    const adapterDB = new MockAdapter()
+    const adapterDB = new MockAdapter({name: '3'})
     const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
 
     await createBot({
@@ -55,7 +56,7 @@ const main2 = async () => {
 }
 const main3 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa4'})
-    const adapterDB = new MockAdapter()
+    const adapterDB = new MockAdapter({name: '4'})
     const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
 
     await createBot({
@@ -64,10 +65,10 @@ const main3 = async () => {
         database: adapterDB,
     })
     QRPortalWeb({name: 'empresa4', port: 4003})
-}
+}*/
 
 exports.adapterProvider = adapterProvider;
 main()
 main1()
-main2()
-main3()
+/*main2()
+main3()*/
