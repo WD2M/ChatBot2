@@ -42,7 +42,7 @@ const main1 = async () => {
     })
     QRPortalWeb({name: 'empresa2', port: 4001})
 }
-/*const main2 = async () => {
+const main2 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa3'})
     const adapterDB = new MockAdapter({name: '3'})
     const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
@@ -65,10 +65,10 @@ const main3 = async () => {
         database: adapterDB,
     })
     QRPortalWeb({name: 'empresa4', port: 4003})
-}*/
+}
 
 exports.adapterProvider = adapterProvider;
 main()
 main1()
-/*main2()
-main3()*/
+main2()
+main3()
