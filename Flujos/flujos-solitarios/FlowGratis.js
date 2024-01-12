@@ -1,5 +1,4 @@
 const { addKeyword } = require('@bot-whatsapp/bot');
-const { EVENTS } = require('@bot-whatsapp/bot');
 
 let correos = ['correo1', 'correo2', 'correo3','correo4', 'correo5', 'correo6']
 let correo = 0

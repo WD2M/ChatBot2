@@ -1,8 +1,8 @@
-const { EVENTS } = require('@bot-whatsapp/bot');
+//const { EVENTS } = require('@bot-whatsapp/bot');
 const { addKeyword } = require('@bot-whatsapp/bot');
 
 
-const flowAudios = addKeyword(EVENTS.VOICE_NOTE)
+const flowAudios = addKeyword('.')
     .addAnswer('lo siento no puedo escuchar audios ahora',null,
      async (ctx) => {
         console.log(ctx)

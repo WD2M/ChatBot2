@@ -12,13 +12,14 @@ const { flowMetodosPago } = require('./Flujos/flujos-solitarios/flowMetodosPago'
 const { flowMetodosDePago } = require('./Flujos/flujos-solitarios/flowMetodosDePago');
 const { flowOferta } = require('./Flujos/flujos-solitarios/flowOferta');
 const { flowSoporte } = require('./Flujos/flujos-solitarios/flowSoporte');
+const { flowEntregaCuentas } = require('./Flujos/flujos-solitarios/flowEntregaCuentas');
 const ServerHttp = require('./Http');
 
 const adapterProvider = createProvider(BaileysProvider)
 
 const main = async () => {
-    const adapterDB = new MockAdapter({name: '1'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
+    const adapterDB = new MockAdapter({filename: '1'})
+    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu/*, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas*/])
 
     await createBot({
         flow: adapterFlow,
@@ -32,8 +33,8 @@ const main = async () => {
 
 const main1 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa2'})
-    const adapterDB = new MockAdapter1({name: '2'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
+    const adapterDB = new MockAdapter1({filename: '2'})
+    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
 
     await createBot({
         flow: adapterFlow,
@@ -44,8 +45,8 @@ const main1 = async () => {
 }
 const main2 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa3'})
-    const adapterDB = new MockAdapter({name: '3'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
+    const adapterDB = new MockAdapter({filename: '3'})
+    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
 
     await createBot({
         flow: adapterFlow,
@@ -56,8 +57,8 @@ const main2 = async () => {
 }
 const main3 = async () => {
     const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa4'})
-    const adapterDB = new MockAdapter({name: '4'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte])
+    const adapterDB = new MockAdapter({filename: '4'})
+    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
 
     await createBot({
         flow: adapterFlow,

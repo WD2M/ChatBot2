@@ -3,9 +3,15 @@ const { flowOferta } = require('./flowOferta');
 const { flowSoporte } = require('./flowSoporte');
 const { flowProductos } = require('./flowProductos');
 const { flowMetodosPago } = require('./flowMetodosPago');
+const { EVENTS } = require('@bot-whatsapp/bot')
 
 const flowPrincipalMenu = addKeyword('5')
-    .addAnswer('*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte')
+    .addAnswer('*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte',
+    null,
+    async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
+        console.log(ctx)
+    }
+    )
     .addAction(
     {
         capture: true,
