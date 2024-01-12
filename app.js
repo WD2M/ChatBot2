@@ -19,7 +19,7 @@ const adapterProvider = createProvider(BaileysProvider)
 
 const main = async () => {
     const adapterDB = new MockAdapter({filename: '1'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu/*, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas*/])
+    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
 
     await createBot({
         flow: adapterFlow,
