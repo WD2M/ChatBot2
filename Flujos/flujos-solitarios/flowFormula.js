@@ -52,7 +52,7 @@ const { flowMetodosDePago } = require('./flowMetodosDePago');
 
 const flowFormula = addKeyword('4')
     .addAnswer('🖊️Solo *Escribe* el nombre de las *plataformas* que deseas y te brindare el precio. *Ejemplo*\n (*HBO*,*Amazon*,*Netflix*, *Star*)')
-    .addAnswer('*6* comprar y medios de pago\n*5* volver al menú anterior')
+    .addAnswer('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
     .addAction(
         {
             capture: true,
@@ -120,12 +120,12 @@ const flowFormula = addKeyword('4')
                 descuento = 1000 * cantidadCombo
                 precio = precio - descuento
                 await flowDynamic(`Este combo de *${mensaje1}* tiene un precio de *${precio}* en total`)
-                await flowDynamic('*6* comprar y medios de pago\n*5* volver al menú anterior')
+                await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
                 return fallBack()
             }
             else if (cantidadCombo == 1) {
                 await flowDynamic(`${mensaje[unico]}`)
-                await flowDynamic('*6* comprar y medios de pago\n*5* volver al menú anterior')
+                await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
                 return fallBack()
             }
             else {
