@@ -10,8 +10,7 @@ const flowMetodosDePago = addKeyword('6')
         },
         async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
             if (ctx.body.includes('event_media')) {
-                await flowDynamic('Por el momento no puedo ver imagenes')
-                //await gotoFlow(flowPrincipalMenu)
+                await flowDynamic('en un momento valido la informacion')
                 fallBack()
             }
             else if (ctx.body.includes('event_voice_note')) {

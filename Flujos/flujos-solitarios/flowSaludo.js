@@ -8,22 +8,15 @@ const { flowOferta } = require('./flowOferta');
 const { flowEntregaCuentas} = require('./flowEntregaCuentas');
 
 const flowSaludo = addKeyword(EVENTS.WELCOME)
-    .addAnswer('🙌 *Hola bienvenido* 🙌\n\n*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  *comprar* y Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte',
-    null,
-    async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
-        console.log(ctx)
-        if (ctx.body.includes('event_media')) {
-            return await gotoFlow(flowEntregaCuentas)
-        }
-    })
+    .addAnswer('🙌 *Hola bienvenido* 🙌\n\n*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  *comprar* y Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte')
     .addAction(
         {
             capture: true,
         },
         async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
             if (ctx.body.includes('event_media')) {
-                await flowDynamic('Por el momento no puedo ver imagenes')
-                await gotoFlow(flowPrincipalMenu)
+                await flowDynamic('en un momento valido la informacion')
+                return fallBack()
             }
             else if (ctx.body.includes('event_voice_note')) {
                 await flowDynamic('Por el momento no puedo escuchar audios')

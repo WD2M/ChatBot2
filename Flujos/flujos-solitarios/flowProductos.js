@@ -2,7 +2,7 @@ const { addKeyword } = require('@bot-whatsapp/bot');
 const { flowFormula } = require('./flowFormula');
 const { flowMetodosPago } = require('./flowMetodosPago');
 
-const mensaje = "*Netflix🍿*\n1 Pantalla *10.000*\n5 pantallas *38.000*\n\n\n\n*Escoje 1  PANTALLA De Estas Plataformas Por Tan Solo*\n💲 *4.000* 👇👇👇\n🟠Star\n🟣HBO max\n🔵prime video\n🟢 Disney plus\n🟡plex\n🔵Paramount\n🔴vix\n\n\n*COMBOS*🔽\n✅Hbomax + Amazon = *7000*\n✅Disney+ Hbo max = *7000*\n✅Amazon+Disney= *7000*\n✅Netflix+Hbo max= *13000*\n✅Netflix+ Paramount = /13.000*\n✅Netflix+ Amazon= *13.000*\n✅Netflix+ Hbo+Disney= *$16.000*\n✅Netflix+ Disney+ Star= *$16.000*\n\n\n*MEGA COMBOS*🔰\n🔰Netflix+Disney+Star+Hbo+Amazon= *$22.000*\n🔰Netflix+Disney+Star+Hbo+Amazon+paramount = *$25.000*\n🔰 Netflix+ Disney+Plex+youtobe premium+iptv con win sports= *$33000*\n🔰 youtobe premium+ Netflix+ crunchyroll,+Disney+Star+paramount+plex+Amazon+Hbo max+iptv con win sports= *49.000*\n\n\n\n*Otras plataformas Individuales!*👇\n⚽ *IPTV (WIN SPORTS)*+300 canales\n*8000*\n\n*YOUTOBE PREMIUM*🔴\n1 MES *10.000*\n\n*SPOTIFY* 🟢\nIndividual 1 Mes\n*10.000*\n\n🎨🖌️✒️ *Canva pro* 🖌️✒️🎨\n*10.000*"
+const mensaje = "*Netflix🍿*\n1 Pantalla *10.000*\n5 pantallas *38.000*\n\n\n\n*Escoje 1  PANTALLA De Estas Plataformas Por Tan Solo*\n💲 *4.000* 👇👇👇\n🟠Star\n🟣HBO max\n🔵prime video\n🟢 Disney plus\n🟡plex\n🔵Paramount\n🔴vix\n\n\n*COMBOS*🔽\n✅Hbomax + Amazon = *7000*\n✅Disney+ Hbo max = *7000*\n✅Amazon+Disney= *7000*\n✅Netflix+Hbo max= *13000*\n✅Netflix+ Paramount = /13.000*\n✅Netflix+ Amazon= *13.000*\n✅Netflix+ Hbo+Disney= *$16.000*\n✅Netflix+ Disney+ Star= *$16.000*\n\n\n*MEGA COMBOS*🔰\n🔰Netflix+Disney+Star+Hbo+Amazon= *$22.000*\n🔰Netflix+Disney+Star+Hbo+Amazon+paramount = *$25.000*\n\n\n\n*Otras plataformas Individuales!*👇\n⚽ *IPTV (WIN SPORTS)*+300 canales\n*8000*\n\n🎨🖌️✒️ *Canva pro* 🖌️✒️🎨\n*10.000*"
 
 
 const flowProductos = addKeyword('1')
@@ -15,7 +15,8 @@ const flowProductos = addKeyword('1')
     async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
         console.log('productos ' + ctx.body)
         if (ctx.body.includes('event_media')) {
-            await flowDynamic('Por el momento no puedo ver imagenes')
+            await flowDynamic('en un momento valido la informacion')
+            return fallBack()
         }
         else if (ctx.body.includes('event_voice_note')) {
             await flowDynamic('Por el momento no puedo escuchar audios')

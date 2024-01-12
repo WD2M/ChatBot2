@@ -4,8 +4,6 @@ const mensaje = [
     '🍿CRUNCHYROL🍿\n4.000\n',
     '🍿DISNEY PLUS🍿\n4.000\n',
     '🍿HBO MAX🍿\n4.000\n',
-    '🔴*YOUTUBE PREMIUN*🔴\n\n1 MES 🍿 10.000\n',
-    '🟢*SPOTIFY*🟢\nIndividual 1 mes\n10.000\n',
     '🍿STAR +🍿\n4.000\n',
     '🍿PLEX PREMIUN FULL CONTENIDO🍿\n4.000\n',
     '⚽IPTV (WIN SPORTS)⚽\n8.000 ', 
@@ -21,8 +19,6 @@ let paquete = [
     /*2*/    4000,
     /*3*/    4000,
     /*4*/    4000,
-    /*5*/    10000,
-    /*6*/    10000,
     /*7*/    4000,
     /*8*/    4000,
     /*9*/    8000,
@@ -37,8 +33,6 @@ let arraysCombos = [
     /*2*/    'Crunc',
     /*3*/    'Disney',
     /*4*/    'Hbo',
-    /*5*/    'Youtube',
-    /*6*/    'Spotify',
     /*7*/    'Star',
     /*8*/    'Plex',
     /*9*/    'Win',
@@ -59,7 +53,8 @@ const flowFormula = addKeyword('4')
         },
         async (ctx, { flowDynamic, fallBack, gotoFlow }) => {
             if (ctx.body.includes('event_media')) {
-                await flowDynamic('Por el momento no puedo ver imagenes')
+                await flowDynamic('en un momento valido la informacion')
+                fallBack()
             }
             else if (ctx.body.includes('event_voice_note')) {
                 await flowDynamic('Por el momento no puedo escuchar audios')

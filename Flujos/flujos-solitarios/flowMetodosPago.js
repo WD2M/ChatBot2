@@ -11,8 +11,8 @@ const flowMetodosPago = addKeyword('2')
         },
         async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
             if (ctx.body.includes('event_media')) {
-                await flowDynamic('Por el momento no puedo ver imagenes')
-                fallBack()
+                await flowDynamic('en un momento valido la informacion')
+                return fallBack()
             }
             else if (ctx.body.includes('event_voice_note')) {
                 await flowDynamic('Por el momento no puedo escuchar audios')
