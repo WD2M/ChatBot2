@@ -18,7 +18,7 @@ const flowMetodosDePago = addKeyword('6')
                 //await gotoFlow(flowPrincipalMenu)
                 fallBack()
             }
-            else if (ctx.body.includes('5')) {
+            else if (ctx.body == '5') {
                 //await gotoFlow(flowProductos)
             }
             else {

@@ -20,11 +20,10 @@ const flowOferta = addKeyword('3')
         else if (ctx.body.includes('event_voice_note')) {
             await flowDynamic('Por el momento no puedo escuchar audios')
         }
-        else if (ctx.body.includes('1')) {
+        else if (ctx.body == '1') {
             await gotoFlow(flowMetodosPago)
         }
-        else if(ctx.body.includes('5')){
-
+        else if(ctx.body == '5'){
         }
         else{
             return fallBack()

@@ -20,16 +20,16 @@ const flowPrincipalMenu = addKeyword('5')
             await flowDynamic('Por el momento no puedo escuchar audios')
             await gotoFlow(flowPrincipalMenu)
         }
-        else if(ctx.body.includes('1')){
+        else if(ctx.body =='1'){
             await gotoFlow(flowProductos)
         }
-        else if(ctx.body.includes('2')){
+        else if(ctx.body == '2'){
             await gotoFlow(flowMetodosPago)
         }
-        else if(ctx.body.includes('3')){
+        else if(ctx.body == '3'){
             await gotoFlow(flowOferta)
         }
-        else if(ctx.body.includes('4')){
+        else if(ctx.body == '4'){
             await gotoFlow(flowSoporte)
         }
         else{

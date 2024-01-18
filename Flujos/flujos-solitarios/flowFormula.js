@@ -59,7 +59,7 @@ const flowFormula = addKeyword('4')
             else if (ctx.body.includes('event_voice_note')) {
                 await flowDynamic('Por el momento no puedo escuchar audios')
             }
-            else if (ctx.body.includes('6')) {
+            else if (ctx.body == '6') {
                 return await gotoFlow(flowMetodosDePago)
             }
             

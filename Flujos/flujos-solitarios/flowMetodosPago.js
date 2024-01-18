@@ -18,7 +18,7 @@ const flowMetodosPago = addKeyword('2')
                 await flowDynamic('Por el momento no puedo escuchar audios')
                 fallBack()
             }
-            else if (ctx.body.includes('5')) {
+            else if (ctx.body == '5') {
             }
             else {
                 return fallBack()
