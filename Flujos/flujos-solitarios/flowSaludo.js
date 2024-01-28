@@ -5,39 +5,9 @@ const { flowSoporte } = require('./flowSoporte');
 const { flowProductos } = require('./flowProductos');
 const { flowMetodosPago } = require('./flowMetodosPago');
 const { flowOferta } = require('./flowOferta');
-const { flowEntregaCuentas} = require('./flowEntregaCuentas');
+const { flowEntregaCuentas } = require('./flowEntregaCuentas');
 
 const flowSaludo = addKeyword(EVENTS.WELCOME)
     .addAnswer('🙌 *Hola bienvenido* 🙌\n\n*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  *comprar* y Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte')
-    .addAction(
-        {
-            capture: true,
-        },
-        async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
-            if (ctx.body.includes('event_media')) {
-                await flowDynamic('en un momento valido la informacion')
-                return fallBack()
-            }
-            else if (ctx.body.includes('event_voice_note')) {
-                await flowDynamic('Por el momento no puedo escuchar audios')
-                await gotoFlow(flowPrincipalMenu)
-            }
-            else if(ctx.body == '1'){
-                await gotoFlow(flowProductos)
-            }
-            else if(ctx.body == '2'){
-                await gotoFlow(flowMetodosPago)
-            }
-            else if(ctx.body == '3'){
-                await gotoFlow(flowOferta)
-            }
-            else if(ctx.body == '4'){
-                await gotoFlow(flowSoporte)
-            }
-            else{
-                return fallBack()
-            }
-        },
-    )
 
 exports.flowSaludo = flowSaludo

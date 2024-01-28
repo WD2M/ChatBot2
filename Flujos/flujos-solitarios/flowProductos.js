@@ -6,35 +6,17 @@ const mensaje = "*Netflix🍿*\n1 Pantalla *10.000*\n5 pantallas *38.000*\n\n\n\
 
 
 const flowProductos = addKeyword('1', { sensitive: true })
-    .addAnswer(mensaje)
-    .addAnswer('*2*. *Comprar* y Médio de pago\n\n*4*. Plan Personalizado\n\n*5* Regresar al Menú Anterior')
     .addAction(
-    {
-        capture: true,
-    },
-    async (ctx, { gotoFlow, flowDynamic, fallBack }) => {
-        console.log('productos ' + ctx.body)
-        if (ctx.body.includes('event_media')) {
-            await flowDynamic('en un momento valido la informacion')
-            return fallBack()
-        }
-        else if (ctx.body.includes('event_voice_note')) {
-            await flowDynamic('Por el momento no puedo escuchar audios')
-        }
-        else if (ctx.body == '2') {
-            await gotoFlow(flowMetodosPago)
-        }
-        else if (ctx.body == '4') {
-            await gotoFlow(flowFormula)
-        }        
-        else if(ctx.body == '5'){
-
-        }
-        else{
-            return fallBack()
-        }
-    },
+        async (ctx, { flowDynamic, endFlow }) => {
+            console.log('productos ' + ctx.body)
+            if (ctx.body == '1') {
+                await flowDynamic(mensaje)
+                await flowDynamic('*2*. *Comprar* y Médio de pago\n\n*4*. Plan Personalizado\n\n*5* Regresar al Menú Anterior')
+            }
+            else {
+                console.log('no es 1')
+                return endFlow()
+            }
+        },
     )
-    
-
 exports.flowProductos = flowProductos;

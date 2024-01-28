@@ -6,7 +6,7 @@ const mensaje = [
     '🍿HBO MAX🍿\n4.000\n',
     '🍿STAR +🍿\n4.000\n',
     '🍿PLEX PREMIUN FULL CONTENIDO🍿\n4.000\n',
-    '⚽IPTV (WIN SPORTS)⚽\n8.000 ', 
+    '⚽IPTV (WIN SPORTS)⚽\n8.000 ',
     '🍿PARAMOUNT🍿\n4.000\n',
     '🎮🕹️*XBOX GAME PASS*🎮🕹️\n15.000 1 mes\n',
     '🎨🖌️✒️*CANVA PRO*🎨🖌️✒️\n15.000\n',
@@ -45,8 +45,19 @@ let arraysCombos = [
 const { flowMetodosDePago } = require('./flowMetodosDePago');
 
 const flowFormula = addKeyword('4', { sensitive: true })
-    .addAnswer('🖊️Solo *Escribe* el nombre de las *plataformas* que deseas y te brindare el precio. *Ejemplo*\n (*HBO*,*Amazon*,*Netflix*, *Star*)')
-    .addAnswer('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
+    .addAction(
+        async (ctx, { gotoFlow, flowDynamic, fallBack, endFlow }) => {
+            console.log('Formula ' + ctx.body)
+            if (ctx.body == '4') {
+                await flowDynamic('🖊️Solo *Escribe* el nombre de las *plataformas* que deseas y te brindare el precio. *Ejemplo*\n (*HBO*,*Amazon*,*Netflix*, *Star*)')
+                await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
+            }
+            else {
+                console.log('no es 4')
+                return endFlow()
+            }
+        },
+    )
     .addAction(
         {
             capture: true,
@@ -62,7 +73,7 @@ const flowFormula = addKeyword('4', { sensitive: true })
             else if (ctx.body == '6') {
                 return await gotoFlow(flowMetodosDePago)
             }
-            
+
             let precio = 0
             let cantidadCombo = 0
             let mensaje1 = ''
