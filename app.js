@@ -18,7 +18,7 @@ const ServerHttp = require('./Http');
 const adapterProvider = createProvider(BaileysProvider)
 
 const main = async () => {
-    const adapterDB = new MockAdapter({filename: '1'})
+    const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
 
     await createBot({
@@ -26,50 +26,8 @@ const main = async () => {
         provider: adapterProvider,
         database: adapterDB,
     })
-    const server = new ServerHttp(adapterProvider);
-    server.start()
-}
-
-
-const main1 = async () => {
-    const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa2'})
-    const adapterDB = new MockAdapter1({filename: '2'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
-
-    await createBot({
-        flow: adapterFlow,
-        provider: adapterProvider1,
-        database: adapterDB,
-    })
-    QRPortalWeb({name: 'empresa2', port: 4001})
-}
-const main2 = async () => {
-    const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa3'})
-    const adapterDB = new MockAdapter({filename: '3'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
-
-    await createBot({
-        flow: adapterFlow,
-        provider: adapterProvider1,
-        database: adapterDB,
-    })
-    QRPortalWeb({name: 'empresa3', port: 4002})
-}
-const main3 = async () => {
-    const adapterProvider1 = createProvider(BaileysProvider,{name: 'empresa4'})
-    const adapterDB = new MockAdapter({filename: '4'})
-    const adapterFlow = createFlow([flowSaludo, flowPrincipalMenu, flowMetodosPago,flowFormula,flowOferta,flowMetodosDePago,flowSoporte,flowEntregaCuentas])
-
-    await createBot({
-        flow: adapterFlow,
-        provider: adapterProvider1,
-        database: adapterDB,
-    })
-    QRPortalWeb({name: 'empresa4', port: 4003})
+    QRPortalWeb()
 }
 
 exports.adapterProvider = adapterProvider;
 main()
-main1()
-main2()
-main3()
