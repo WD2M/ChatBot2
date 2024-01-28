@@ -1,7 +1,7 @@
 const { addKeyword } = require('@bot-whatsapp/bot');
 
 
-const flowMetodosDePago = addKeyword('6')
+const flowMetodosDePago = addKeyword('6', { sensitive: true })
     .addAnswer('*MEDIO DE PAGO*💳 💲\n\n*NEQUI*\n##3232856195\n\n*DAVIPLATA*\n##3232856195\n\n🛑 No Olvides Enviar  Comprobante De Pago\n\nGracias por confiar en Nosotros!😁')
     .addAnswer('*5* Regresar al Menú Anterior')
     .addAction(

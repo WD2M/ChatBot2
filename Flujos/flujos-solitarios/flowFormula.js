@@ -44,7 +44,7 @@ let arraysCombos = [
 
 const { flowMetodosDePago } = require('./flowMetodosDePago');
 
-const flowFormula = addKeyword('4')
+const flowFormula = addKeyword('4', { sensitive: true })
     .addAnswer('🖊️Solo *Escribe* el nombre de las *plataformas* que deseas y te brindare el precio. *Ejemplo*\n (*HBO*,*Amazon*,*Netflix*, *Star*)')
     .addAnswer('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
     .addAction(

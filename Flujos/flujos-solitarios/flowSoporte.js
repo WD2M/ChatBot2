@@ -2,7 +2,7 @@ const { addKeyword } = require('@bot-whatsapp/bot');
 
 const SearchContactChatWood = require('../../servicios/SearchContacs');
 
-const flowSoporte = addKeyword('4')
+const flowSoporte = addKeyword('4', { sensitive: true })
     .addAnswer('Para brindarle *Soporte* a tu problema *ingresa* en el *Link* de *WhatsApp* https://wa.link/0wf9bc\n\nEn el *Link* te darán pronta *Solución*  ⚙️🧰')
     .addAnswer('*5* Regresar al Menú Anterior')
     .addAction({ capture: true, idle: 600000 }, async (ctx, { fallBack }) => {

@@ -5,7 +5,7 @@ const { flowMetodosPago } = require('./flowMetodosPago');
 const mensajeEntorno = process.env.Promocion ?? 'aca es una prueba'
 
 
-const flowOferta = addKeyword('3') 
+const flowOferta = addKeyword('3', { sensitive: true }) 
 .addAnswer(`*Super Promo Del Día*🪄\n\n${mensajeEntorno}`)
 .addAnswer('*1* *comprar* y medios de pago\n*5* volver al menú anterior')
 .addAction(

@@ -2,7 +2,7 @@ const { addKeyword } = require('@bot-whatsapp/bot');
 //const { flowEntregaCuentas } = require('./flowEntregaCuentas');
 
 
-const flowMetodosPago = addKeyword('2')
+const flowMetodosPago = addKeyword('2', { sensitive: true })
     .addAnswer('*MEDIO DE PAGO*💳 💲\n\n*NEQUI*\n#3232856195\n\n*DAVIPLATA*\n#3232856195\n\n🛑 No Olvides Enviar  Comprobante De Pago\n\n🛑 Indicar  que  Plataformas Deseas\n\nGracias por confiar en Nosotros!😁')
     .addAnswer('para regresar al menu principal escribe *5*')
     .addAction(

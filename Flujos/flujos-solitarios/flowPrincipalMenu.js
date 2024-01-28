@@ -5,7 +5,7 @@ const { flowProductos } = require('./flowProductos');
 const { flowMetodosPago } = require('./flowMetodosPago');
 const { EVENTS } = require('@bot-whatsapp/bot')
 
-const flowPrincipalMenu = addKeyword('5')
+const flowPrincipalMenu = addKeyword('5', { sensitive: true })
     .addAnswer('*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  *comprar* y Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte')
     .addAction(
     {

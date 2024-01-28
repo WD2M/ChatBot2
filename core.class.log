@@ -1,0 +1,561 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: '0DFDA96B4214BA08AB2AEE4C50F3B427',
+    participant: undefined
+  },
+  messageTimestamp: 1706415431,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'Hola',
+      previewType: 0,
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '573113726950'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_0b7b1a28-76f4-4840-821a-5aa374489b84',
+  keyword: 'key_1364bba3-8fb5-49e1-8cdc-9d0d34070cc0',
+  answer: '🙌 *Hola bienvenido* 🙌\n' +
+    '\n' +
+    '*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n' +
+    '\n' +
+    '*1*   Planes y Combos\n' +
+    '*2*  *comprar* y Metodos de Pago.\n' +
+    '*3*  Promoción del Día.\n' +
+    '*4*  soporte',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '6bb38c922e2beabec5f7f0145fe276c9'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_9c15ab31-efa8-4411-a651-25b21a0a02a6',
+  keyword: 'ans_0b7b1a28-76f4-4840-821a-5aa374489b84',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '82a28f273073890c982aa2903967bc6b'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'E3FD4AF3BD73ECB11CEDF6160B00A83D',
+    participant: undefined
+  },
+  messageTimestamp: 1706415434,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'D5D0AD71787216F02E038CC7BA0679DD',
+    participant: undefined
+  },
+  messageTimestamp: 1706415442,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'E9857DD0982093877AB304E88985D30A',
+    participant: undefined
+  },
+  messageTimestamp: 1706415444,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'B46C50A5CFB8D30F8579DC4D13D0AD28',
+    participant: undefined
+  },
+  messageTimestamp: 1706415444,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: '86D123CC03A9CCA0F3D32DCECBF80798',
+    participant: undefined
+  },
+  messageTimestamp: 1706415445,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'D80764AE711B5D07041A5F14A8BB4B6A',
+    participant: undefined
+  },
+  messageTimestamp: 1706415446,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: '8529DF4DF674A4B6A7B02CD99B5B222E',
+    participant: undefined
+  },
+  messageTimestamp: 1706415447,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '5',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '5',
+  from: '573113726950'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_e223a499-add8-462f-b331-2c4a51fed021',
+  keyword: 'key_df1e5b95-58b7-4c75-8333-afa260937b43',
+  answer: '*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n' +
+    '\n' +
+    '*1*   Planes y Combos\n' +
+    '*2*  *comprar* y Metodos de Pago.\n' +
+    '*3*  Promoción del Día.\n' +
+    '*4*  soporte',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'c22b21ded8dc5aa7f0f4d25a0a5c3617'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5343a3c6-f6d5-4425-987c-f46f58baf8da',
+  keyword: 'ans_e223a499-add8-462f-b331-2c4a51fed021',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b8049ca9b5364fc78be40024d3ddb726'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'EB38F93FCD86A39737009755F8F19FFE',
+    participant: undefined
+  },
+  messageTimestamp: 1706415450,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '573113726950'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: '2742F9B4582FA9DB77A7BDD5E333ACEF',
+    participant: undefined
+  },
+  messageTimestamp: 1706415453,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '3',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '3',
+  from: '573113726950'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_cf93b860-bf43-478a-b393-78ba0638ac6d',
+  keyword: 'key_697aefa5-e3f8-4867-9746-d2692b462bff',
+  answer: '*Super Promo Del Día*🪄\n\naca es una prueba',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'c2dfd86ce3e5e64914cfebc137131229'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_0b00c602-d838-46c2-85b8-b66deb6a60a7',
+  keyword: 'ans_cf93b860-bf43-478a-b393-78ba0638ac6d',
+  answer: '*1* *comprar* y medios de pago\n*5* volver al menú anterior',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '31f496e4d80ee9e751297f2d76b83b32'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_4b77914d-15f5-451c-bcc2-bf130caa676d',
+  keyword: 'ans_0b00c602-d838-46c2-85b8-b66deb6a60a7',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'e75d7b62ee12b9bf74ca1efd6b97a455'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'C1F4AB271FFBE37DA3189B70520A1298',
+    participant: undefined
+  },
+  messageTimestamp: 1706415456,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '573113726950'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_9b64713a-009e-4a26-ba8b-e142266882f2',
+  keyword: 'key_f2ee23ce-3e47-447f-8c75-9434b563e07c',
+  answer: '*MEDIO DE PAGO*💳 💲\n' +
+    '\n' +
+    '*NEQUI*\n' +
+    '#3232856195\n' +
+    '\n' +
+    '*DAVIPLATA*\n' +
+    '#3232856195\n' +
+    '\n' +
+    '🛑 No Olvides Enviar  Comprobante De Pago\n' +
+    '\n' +
+    '🛑 Indicar  que  Plataformas Deseas\n' +
+    '\n' +
+    'Gracias por confiar en Nosotros!😁',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'a08d8555b757971b5e31f276d35dc011'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_50c55cf0-9571-49b8-8ede-5e4ac1bde3e1',
+  keyword: 'ans_9b64713a-009e-4a26-ba8b-e142266882f2',
+  answer: 'para regresar al menu principal escribe *5*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '64eacd8d58fcf3a523c967d4922b53de'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6c8ee066-2f39-4f3f-a180-3a65ab39024b',
+  keyword: 'ans_50c55cf0-9571-49b8-8ede-5e4ac1bde3e1',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'c8b0d42212cc33db11fdb9f194e78392'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: 'C107E1DDBC37B630966A41077AC53239',
+    participant: undefined
+  },
+  messageTimestamp: 1706415461,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '573113726950'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_9b64713a-009e-4a26-ba8b-e142266882f2',
+  keyword: 'key_f2ee23ce-3e47-447f-8c75-9434b563e07c',
+  answer: '*MEDIO DE PAGO*💳 💲\n' +
+    '\n' +
+    '*NEQUI*\n' +
+    '#3232856195\n' +
+    '\n' +
+    '*DAVIPLATA*\n' +
+    '#3232856195\n' +
+    '\n' +
+    '🛑 No Olvides Enviar  Comprobante De Pago\n' +
+    '\n' +
+    '🛑 Indicar  que  Plataformas Deseas\n' +
+    '\n' +
+    'Gracias por confiar en Nosotros!😁',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'a08d8555b757971b5e31f276d35dc011'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_50c55cf0-9571-49b8-8ede-5e4ac1bde3e1',
+  keyword: 'ans_9b64713a-009e-4a26-ba8b-e142266882f2',
+  answer: 'para regresar al menu principal escribe *5*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '64eacd8d58fcf3a523c967d4922b53de'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6c8ee066-2f39-4f3f-a180-3a65ab39024b',
+  keyword: 'ans_50c55cf0-9571-49b8-8ede-5e4ac1bde3e1',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'c8b0d42212cc33db11fdb9f194e78392'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573113726950@s.whatsapp.net',
+    fromMe: false,
+    id: '77F196C0A39C627AA637844C9F538212',
+    participant: undefined
+  },
+  messageTimestamp: 1706415486,
+  pushName: '🤟🤘🖤WD2M🖤🤘🤟',
+  broadcast: false,
+  message: Message {
+    conversation: 'Necesito 5 de Netflix',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Necesito 5 de Netflix',
+  from: '573113726950'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_e223a499-add8-462f-b331-2c4a51fed021',
+  keyword: 'key_df1e5b95-58b7-4c75-8333-afa260937b43',
+  answer: '*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n' +
+    '\n' +
+    '*1*   Planes y Combos\n' +
+    '*2*  *comprar* y Metodos de Pago.\n' +
+    '*3*  Promoción del Día.\n' +
+    '*4*  soporte',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'c22b21ded8dc5aa7f0f4d25a0a5c3617'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5343a3c6-f6d5-4425-987c-f46f58baf8da',
+  keyword: 'ans_e223a499-add8-462f-b331-2c4a51fed021',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'b8049ca9b5364fc78be40024d3ddb726'
+}
