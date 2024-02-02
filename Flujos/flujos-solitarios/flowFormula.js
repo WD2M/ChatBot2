@@ -1,31 +1,32 @@
 const mensaje = [
-    '🍿NETFLIX🍿\n10.000 28 dias\n',
-    '🍿AMAZON PRIME🍿\n4.000\n',
-    '🍿CRUNCHYROL🍿\n4.000\n',
-    '🍿DISNEY PLUS🍿\n4.000\n',
-    '🍿HBO MAX🍿\n4.000\n',
-    '🍿STAR +🍿\n4.000\n',
-    '🍿PLEX PREMIUN FULL CONTENIDO🍿\n4.000\n',
-    '⚽IPTV (WIN SPORTS)⚽\n8.000 ',
-    '🍿PARAMOUNT🍿\n4.000\n',
-    '🎮🕹️*XBOX GAME PASS*🎮🕹️\n15.000 1 mes\n',
-    '🎨🖌️✒️*CANVA PRO*🎨🖌️✒️\n15.000\n',
-    '🍿*VIX*🍿\n4.000']
+ /*0*/   `🍿NETFLIX🍿\n${process.env.PrecioNetflix} 28 dias\n`,
+ /*1*/   `🍿AMAZON PRIME🍿\n${process.env.Plataformas}\n`,
+ /*2*/   `🍿CRUNCHYROL🍿\n${process.env.Plataformas}\n`,
+ /*3*/   `🍿DISNEY PLUS🍿\n${process.env.Plataformas}\n`,
+ /*4*/   `🍿HBO MAX🍿\n${process.env.Plataformas}\n`,
+ /*5*/   `🍿STAR +🍿\n${process.env.Plataformas}\n`,
+ /*6*/   `🍿PLEX PREMIUN FULL CONTENIDO🍿\n${process.env.Plataformas}\n`,
+ /*7*/   `⚽IPTV (WIN SPORTS)⚽\n${process.env.Win} `,
+ /*8*/   `🍿PARAMOUNT🍿\n${process.env.Plataformas}\n`,
+ /*9*/   `🎮🕹️*XBOX GAME PASS*🎮🕹️\n${process.env.Xbox} 1 mes\n`,
+ /*10*/   `🎨🖌️✒️*CANVA PRO*🎨🖌️✒️\n${process.env.Canva}\n`,
+ /*11*/   `🍿*VIX*🍿\n${process.env.Plataformas}`
+]
 const { addKeyword } = require('@bot-whatsapp/bot');
 
 let paquete = [
-    /*0*/    10000,
-    /*1*/    4000,
-    /*2*/    4000,
-    /*3*/    4000,
-    /*4*/    4000,
-    /*7*/    4000,
-    /*8*/    4000,
-    /*9*/    8000,
-    /*10*/   4000,
-    /*11*/   15000,
-    /*12*/   15000,
-    /*13*/   4000
+    /*0*/    process.env.PrecioNetflix,
+    /*1*/    process.env.Plataformas,
+    /*2*/    process.env.Plataformas,
+    /*3*/    process.env.Plataformas,
+    /*4*/    process.env.Plataformas,
+    /*5*/    process.env.Plataformas,
+    /*6*/    process.env.Plataformas,
+    /*7*/    process.env.Win,
+    /*8*/    process.env.Plataformas,
+    /*9*/    process.env.Xbox,
+    /*10*/   process.env.Canva,
+    /*11*/   process.env.Plataformas
 ]
 let arraysCombos = [
     /*0*/    'Netflix',
@@ -33,27 +34,23 @@ let arraysCombos = [
     /*2*/    'Crunc',
     /*3*/    'Disney',
     /*4*/    'Hbo',
-    /*7*/    'Star',
-    /*8*/    'Plex',
-    /*9*/    'Win',
-    /*10*/   'Param',
-    /*11*/   'Game',
-    /*12*/   'Canva',
-    /*13*/   'vix'
+    /*5*/    'Star',
+    /*6*/    'Plex',
+    /*7*/    'Win',
+    /*8*/   'Param',
+    /*9*/   'Game',
+    /*10*/   'Canva',
+    /*11*/   'vix'
 ];
-
-const { flowMetodosDePago } = require('./flowMetodosDePago');
 
 const flowFormula = addKeyword('4', { sensitive: true })
     .addAction(
-        async (ctx, { gotoFlow, flowDynamic, fallBack, endFlow }) => {
-            console.log('Formula ' + ctx.body)
+        async (ctx, { flowDynamic, endFlow }) => {
             if (ctx.body == '4') {
                 await flowDynamic('🖊️Solo *Escribe* el nombre de las *plataformas* que deseas y te brindare el precio. *Ejemplo*\n (*HBO*,*Amazon*,*Netflix*, *Star*)')
                 await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
             }
             else {
-                console.log('no es 4')
                 return endFlow()
             }
         },
@@ -70,9 +67,6 @@ const flowFormula = addKeyword('4', { sensitive: true })
             else if (ctx.body.includes('event_voice_note')) {
                 await flowDynamic('Por el momento no puedo escuchar audios')
             }
-            else if (ctx.body == '6') {
-                return await gotoFlow(flowMetodosDePago)
-            }
 
             let precio = 0
             let cantidadCombo = 0
@@ -85,7 +79,7 @@ const flowFormula = addKeyword('4', { sensitive: true })
                 for (let j = 0; j < arraysCombos.length; j++) {
                     if (mensajeArray[i].toLowerCase().includes(arraysCombos[j].toLowerCase())) {
                         unico = j
-                        precio = paquete[j] + precio
+                        precio = parseInt(paquete[j]) + parseInt(precio)
                         cantidadCombo++
                         if (cantidadCombo == 1) {
                             mensaje1 = arraysCombos[j]
@@ -106,7 +100,7 @@ const flowFormula = addKeyword('4', { sensitive: true })
                     if (j == 1) {
                         if (mensajeArray[i].toLowerCase().includes('prime')) {
                             if (!mensaje1.toLowerCase().includes('amazon')) {
-                                precio = paquete[j] + precio
+                                precio = parseInt(paquete[j]) + parseInt(precio)
                                 cantidadCombo++
                                 unico = j
                                 if (cantidadCombo == 1) {
@@ -124,7 +118,7 @@ const flowFormula = addKeyword('4', { sensitive: true })
 
                 cantidadCombo = cantidadCombo - 1
                 descuento = 1000 * cantidadCombo
-                precio = precio - descuento
+                precio = parseInt(precio) - parseInt(descuento)
                 await flowDynamic(`Este combo de *${mensaje1}* tiene un precio de *${precio}* en total`)
                 await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
                 return fallBack()
@@ -139,6 +133,5 @@ const flowFormula = addKeyword('4', { sensitive: true })
             }
         }
     )
-
 
 exports.flowFormula = flowFormula
