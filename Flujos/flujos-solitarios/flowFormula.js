@@ -51,7 +51,7 @@ const flowFormula = addKeyword('7', { sensitive: true })
                 await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
             }
             else {
-                return endFlow()
+                //return endFlow()
             }
         },
     )

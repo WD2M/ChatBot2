@@ -13,7 +13,7 @@ const flowOferta = addKeyword('3', { sensitive: true })
                 await flowDynamic('*1* *comprar* y medios de pago\n*5* volver al menú anterior')
             }
             else {
-                return endFlow()
+                //return endFlow()
             }
         },
     )

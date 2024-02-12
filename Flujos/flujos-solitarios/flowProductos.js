@@ -10,7 +10,7 @@ const flowProductos = addKeyword('1', { sensitive: true })
                 await flowDynamic('*2*. *Comprar* y Médio de pago\n\n*5* Regresar al Menú Anterior\n\n*7*. Plan Personalizado')
             }
             else {
-                return endFlow()
+                //return endFlow()
             }
         },
     )

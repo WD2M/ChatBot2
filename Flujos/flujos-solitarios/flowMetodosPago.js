@@ -9,7 +9,7 @@ const flowMetodosPago = addKeyword('2', { sensitive: true })
                 await flowDynamic('para regresar al menu principal escribe *5*')
             }
             else {
-                return endFlow()
+                //return endFlow()
             }
         },
     )
