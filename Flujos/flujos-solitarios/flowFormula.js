@@ -43,10 +43,10 @@ let arraysCombos = [
     /*11*/   'vix'
 ];
 
-const flowFormula = addKeyword('4', { sensitive: true })
+const flowFormula = addKeyword('7', { sensitive: true })
     .addAction(
         async (ctx, { flowDynamic, endFlow }) => {
-            if (ctx.body == '4') {
+            if (ctx.body == '7') {
                 await flowDynamic('🖊️Solo *Escribe* el nombre de las *plataformas* que deseas y te brindare el precio. *Ejemplo*\n (*HBO*,*Amazon*,*Netflix*, *Star*)')
                 await flowDynamic('*6* *comprar* y medios de pago\n*5* volver al menú anterior')
             }

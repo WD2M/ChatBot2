@@ -7,7 +7,7 @@ const flowProductos = addKeyword('1', { sensitive: true })
         async (ctx, {flowDynamic, endFlow }) => {
             if (ctx.body == '1') {
                 await flowDynamic(mensaje)
-                await flowDynamic('*2*. *Comprar* y Médio de pago\n\n*4*. Plan Personalizado\n\n*5* Regresar al Menú Anterior')
+                await flowDynamic('*2*. *Comprar* y Médio de pago\n\n*5* Regresar al Menú Anterior\n\n*7*. Plan Personalizado')
             }
             else {
                 return endFlow()
