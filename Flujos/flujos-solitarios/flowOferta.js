@@ -10,7 +10,7 @@ const flowOferta = addKeyword('3', { sensitive: true })
         async (ctx, { gotoFlow, flowDynamic, fallBack, endFlow }) => {
             if (ctx.body == '3') {
                 await flowDynamic(`*Super Promo Del Día*🪄\n\n${mensajeEntorno}`)
-                await flowDynamic('*1* *comprar* y medios de pago\n*5* volver al menú anterior')
+                await flowDynamic('*1* *comprar* y medios de pago\n*6* volver al menú anterior')
             }
             else {
                 //return endFlow()

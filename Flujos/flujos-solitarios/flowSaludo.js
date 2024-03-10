@@ -13,7 +13,7 @@ const flowSaludo = addKeyword(EVENTS.WELCOME)
             
             const actual = JSON.stringify(state.getMyState()) + "sin invocar"
             if(!actual.includes("estado")){
-                await flowDynamic('🙌 *Hola bienvenido* 🙌\n\n*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  *comprar* y Metodos de Pago.\n*3*  Promoción del Día.\n*4*  soporte')
+                await flowDynamic('🙌 *Hola bienvenido* 🙌\n\n*Envia un mensaje con la opcion que deseas*. (Ejemplo=1).\n\n*1*   Planes y Combos\n*2*  *comprar* y Metodos de Pago.\n*3*  Promoción del Día.\n*4*  Descuentos Cine Colombia\n*5*  soporte')
                 await state.update({ estado: "true" })
             }
         },

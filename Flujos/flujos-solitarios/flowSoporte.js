@@ -2,12 +2,12 @@ const { addKeyword } = require('@bot-whatsapp/bot');
 
 const SearchContactChatWood = require('../../servicios/SearchContacs');
 
-const flowSoporte = addKeyword('4', { sensitive: true })
+const flowSoporte = addKeyword('5', { sensitive: true })
     .addAction(
         async (ctx, { flowDynamic, endFlow }) => {
-            if (ctx.body == '4') {
-                await flowDynamic('Para brindarle *Soporte* a tu problema *ingresa* en el *Link* de *WhatsApp* https://wa.link/0wf9bc \n\nEn el *Link* te darán pronta *Solución*  ⚙️🧰')
-                await flowDynamic('*5* Regresar al Menú Anterior')
+            if (ctx.body == '5') {
+                await flowDynamic('*Hola!* 👋\n\n*Bienvenido a soporte!*, indicame estos datos de la cuenta que presenta inconveniente:\n\nCorreo\nClave\nPerfil y Pin\nFoto del error\nEscribe que problema presentas🧰⚙️')
+                await flowDynamic('*6* Regresar al Menú Anterior')
             }
             else {
                 return endFlow()
